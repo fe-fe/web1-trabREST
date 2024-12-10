@@ -21,14 +21,14 @@ class MessageRepository {
   }
 
   async findAllFav() {
-    const [row] = await db.query(
+    const rows = await db.query(
       `
       SELECT mensagens.*
       FROM mensagens
       WHERE mensagens.fav = TRUE;
       `
     );
-    return [row];
+    return rows;
   }
 
   async create({ titulo, msg }) {

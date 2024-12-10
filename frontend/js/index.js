@@ -34,7 +34,6 @@ async function getTitles(modo){
 
     if (response.ok) {
         var msgs = await response.json();
-        console.log(msgs)
         msgs.forEach((m) => {
             let msg = document.createElement("button");
             msg.id = m.id
@@ -81,7 +80,7 @@ async function getTitles(modo){
 }
 
 
-window.addEventListener("load", getTitles());
+window.addEventListener("load", () => getTitles(select.value));
 
 criarForm.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -105,8 +104,7 @@ criarForm.addEventListener("submit", async (event) => {
     newMsgText.value = ""
     newMsgTitle.value = ""
 
-    getTitles("");
-
+    getTitles(select.value)
     
 })
 
@@ -141,10 +139,11 @@ modalSave.addEventListener("click", async () => {
         })
     })
     modal.style.display = "none"
-    getTitles("");
+    getTitles(select.value);
 })
 
 select.addEventListener("change", () => {
+    console.log("novo valor " + select.value)
     getTitles(select.value);
 })
 
