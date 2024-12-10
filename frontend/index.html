@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mensagens</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/styles/styles.css">
+    <link id="tema" rel="stylesheet" href="./css/themes/grape-theme.css">
+    <link id="bg" rel="stylesheet" href="./css/themes/grape-bg.css">
+</head>
+<body>
+    
+    <div class="modal">
+        <div id="msgbox" class="box p2 fade2 flexc">
+            <div class="flex alc gap1">
+                <input id="modalTitle" class="basic pbauto f-small mb05" type="text" value="insira o titulo aqui...">
+                <i id="modalFav" class="fa" aria-hidden="true"></i>
+            </div>
+            
+            <textarea id="modalText" class="basic f-small mb1">insira a mensagem aqui...</textarea>
+            <div class="flex jusr gap1">
+                <button id="modalDelete" class="basic fade1">excluir</button>
+                <button id="modalCancel" class="basic fade1">cancelar</button>
+                <button id="modalSave" class="basic fade1">salvar</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="navbar">
+        
+        <div class="flex alc">
+            <a href="https://github.com/fe-fe/fariafu" target="_blank">
+                <button class="title">mensagens</button>
+            </a>
+            <button id="temabt" class="f-xlarge">🍒</button>
+        </div>
+        <div class="navlinks">
+            <a href="https://github.com/fe-fe/attweb1-api" target="_blank">
+                <button class="basic f-large">GitHub</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="navfooter"></div>
+
+    <div class="content">
+
+        <div>
+
+
+    
+            <div class="box index p2 fade2 flexc gap1">
+    
+                <div class="flex jussb">
+
+                    <span>bem-vindo(a)</span>
+     
+
+                </div>
+
+                <div class="janelas gap1">
+                    <div class="minibox p2">
+    
+                        <form id="criarForm">
+                            <div class="flex gap05 jussb alc">
+                                <span>nova mensagem</span>
+                                <button id="criarBt" type="submit" class="basic hmax f-small fade1">salvar</button>
+                            </div>
+    
+                            <hr class="separator pb05">
+    
+                            <input id="newMsgTitle" class="basic pbauto f-small mb05" type="text" placeholder="insira o titulo aqui...">
+                            <textarea id="newMsgText" class="basic f-small" placeholder="insira a mensagem aqui..."></textarea>
+                            
+                        </form>         
+                        
+                    </div>
+                    <div class="minibox p2 pb3">
+                    
+                        <div class="flex jussb alc">
+                            <span>mensagens</span>
+                            <select id="select" class="basic f-small ta-right">
+                                <option>todas</option>
+                                <option>favoritas</option>
+                            </select>
+                        </div>
+    
+                        <hr class="separator pb05">
+    
+                        <div class="msgs gap1">
+    
+                        </div>
+        
+                        
+        
+                    </div>
+                </div>
+    
+
+        </div>
+
+
+        
+        
+            
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+    <script src="js/tema.js"></script>
+</body>
+</html>

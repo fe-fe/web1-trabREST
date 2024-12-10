@@ -1,0 +1,15 @@
+DROP DATABASE IF EXISTS mensagens;
+CREATE DATABASE mensagens;
+USE mensagens;
+
+CREATE TABLE IF NOT EXISTS mensagens (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(50) NOT NULL,
+    msg VARCHAR(100),
+    fav BOOLEAN
+);
+
+SHOW TABLES;
+DESCRIBE mensagens;
+
+
