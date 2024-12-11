@@ -112,6 +112,8 @@ criarForm.addEventListener("submit", async (event) => {
 
 modalCancel.addEventListener("click", () => {
     modal.style.display = "none";
+    modalFav.classList.remove("fa-star")
+    modalFav.classList.remove("fa-star-o")
 })
 
 
