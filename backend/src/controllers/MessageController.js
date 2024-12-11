@@ -9,11 +9,11 @@ class MessageController {
   async show(request, response) {
     const { id } = request.params;
 
-    const user = await MessageRepository.findById(id);
-    if (!user) {
-      return response.status(404).json({ error: "User not found!" });
+    const msg = await MessageRepository.findById(id);
+    if (!msg) {
+      return response.status(404).json({ error: "msg not found!" });
     }
-    response.json(user);
+    response.json(msg);
   }
 
   async store(request, response) {
