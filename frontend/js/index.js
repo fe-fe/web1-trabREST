@@ -64,6 +64,7 @@ async function getTitles(modo){
                 let selectMsg = await response.json()
                 modalTitle.value = selectMsg.titulo
                 modalText.value = selectMsg.msg
+                fav = selectMsg.fav
                 if (!selectMsg.fav) {
                     modalFav.classList.add("fa-star-o")
                 } else {
